@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState, useEffect} from 'react';
+import { Routes, Route, Link, Switch, Outlet } from 'react-router-dom';
 
-function App() {
+
+export default function App() {
+  const [page, setPage] = useState('home')
+  const [hamburger, setHamburger] = useState(true)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className="appContainer" id="appContainer">
+      <div className="content">
+        <Outlet/>
+        {/* <Routes>
+          <Route path="/" element={<Home setPage={setPage} setHamburger={setHamburger} />} />
+          <Route path="blog" element={<Blogs setPage={setPage} />} />
+          <Route path="drone" element={<Drone setPage={setPage} />} />
+          <Route path="aboutme" element={<AboutMe setPage={setPage} />} />
+          <Route path="socialmedia" element={<SocialMedia setPage={setPage} />} />
+          <Route path="productivity" element={<Productivity setPage={setPage} />} />
+          <Route path="aboutme" element={<AboutMe setPage={setPage} />} />
+        </Routes> */}
 
-export default App;
+        <br></br>
+        {/* <div className="copyrightApp" style={{ margin: 'auto' }}>© 2022 Jay.andthesky. Made possible with React.js, ArangoDB, and DJI.</div> */}
+        <img src="DronePhoto/Hamburger_icon.svg" className="hamburgerIcon" onClick={(e) => {
+          if (hamburger) { setHamburger(false); } 
+          else { setHamburger(true); }
+        }} />
+        {hamburger ?
+          <div className="hamburgerMenu">
+            <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>X</div>
+            <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
+              <Link to="/" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link>
+            </div>
+            {/* <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
+              <Link to="aerialdrone" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Aerial Drone</Link>
+            </div> */}
+            <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
+              <Link to="blog" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link>
+            </div>
+            <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
+              <Link to="productivity" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Productivity</Link>
+            </div>
+            <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
+              <Link to="socialmedia" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Social Media</Link>
+            </div>
+            <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false)
+            }}>
+              <Link to="aboutme" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Software Engineering</Link>
+            </div>
+          </div>
+          : null}
+      </div>
+    </div>
+  )
+}

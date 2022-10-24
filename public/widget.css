@@ -1,0 +1,65 @@
+.hoverPointer:hover {
+    cursor: pointer;
+    border: solid grey 1px;
+    border-radius: 2px;
+}
+
+.pomodoroTimerContainer {
+    margin-top: 50px;
+    width: 600px;
+    height: 300px;
+    border: solid black 3px;
+    border-radius: 10px;
+    background-color: rgb(255, 95, 95);
+}
+.pomodoroTitle {
+    align-items: center;
+    font-size: 2rem;
+}
+.pomodoroDisplay {
+    font-size: 4.0rem;
+}
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pomodoroButtons {
+    border: solid black 1.5px;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px;
+    font-size: 1.2rem;
+}
+.pomodoroButtons:hover {
+    background-color: grey;
+    color: white;
+    border: solid grey 1.5px;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.widgetButtons {
+    background-color: white;
+    border: solid black 1.5px;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px;
+    font-size: 1.2rem;
+}
+
+.widgetButtons:hover {
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    border: solid grey 1.5px;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
