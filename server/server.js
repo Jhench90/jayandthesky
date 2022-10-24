@@ -10,33 +10,34 @@ var bodyParser = require('body-parser');
 app.use(express.static('build'));
 app.use(bodyParser.json())
 
-console.log(__dirname)
+app.get('/flashcards', (req, res)=>{
+    let collection = db.collection('flashcards');
+  
+    //code to add new document
+    // let collection = db.collection('flashcards');
+    // let doc = {
+    //   _key: 'secondDocument',
+    //   a: 'foo',
+    //   b: 'bar'
+    // }
+    // collection.save(doc).then(
+    //   meta => console.log('Document saved: ', meta._rev)
+    // )
+  
+    // retrieve entire collection
+    collection.all().then(
+      cursor => cursor.map(doc => doc)
+    ).then(
+      keys => res.send(keys)
+    )
+  })
+
 app.get('*', (req, res)=>{
     res.sendFile('index.html', {root: 'build'});
 })
 
 
-app.get('/flashcards', (req, res)=>{
-  let collection = db.collection('flashcards');
 
-  //code to add new document
-  // let collection = db.collection('flashcards');
-  // let doc = {
-  //   _key: 'secondDocument',
-  //   a: 'foo',
-  //   b: 'bar'
-  // }
-  // collection.save(doc).then(
-  //   meta => console.log('Document saved: ', meta._rev)
-  // )
-
-  // retrieve entire collection
-  collection.all().then(
-    cursor => cursor.map(doc => doc)
-  ).then(
-    keys => res.send(keys)
-  )
-})
 
 app.patch('/flashcards', (req, res)=>{
   console.log(req.body)

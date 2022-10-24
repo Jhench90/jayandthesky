@@ -12,8 +12,9 @@ export default function Flashcard() {
     const [newDefinition, setNewDefinition] = useState('');
 
     useEffect(() => {
-        axios.get(' http://67.161.47.190/flashcards')
+        axios.get('/flashcards')
             .then((response) => {
+                console.log('response is: ', response)
                 if (response.data.length === 0) {
                     setWordBank([{ word: 'add words to your collection', definition: 'and they will show up here' }])
                 } else {

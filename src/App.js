@@ -4,7 +4,7 @@ import { Routes, Route, Link, Switch, Outlet } from 'react-router-dom';
 
 export default function App() {
   const [page, setPage] = useState('home')
-  const [hamburger, setHamburger] = useState(true)
+  const [hamburger, setHamburger] = useState(false)
 
   return (
     <div className="appContainer" id="appContainer">

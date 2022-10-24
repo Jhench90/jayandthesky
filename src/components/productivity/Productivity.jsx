@@ -7,7 +7,7 @@ function Productivity() {
         <>
             <div className="flexContainer">
                 <Timer />
-                <Flashcard />
+                {/* <Flashcard /> */}
             </div>
         </>
     )
