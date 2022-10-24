@@ -10,16 +10,6 @@ export default function App() {
     <div className="appContainer" id="appContainer">
       <div className="content">
         <Outlet/>
-        {/* <Routes>
-          <Route path="/" element={<Home setPage={setPage} setHamburger={setHamburger} />} />
-          <Route path="blog" element={<Blogs setPage={setPage} />} />
-          <Route path="drone" element={<Drone setPage={setPage} />} />
-          <Route path="aboutme" element={<AboutMe setPage={setPage} />} />
-          <Route path="socialmedia" element={<SocialMedia setPage={setPage} />} />
-          <Route path="productivity" element={<Productivity setPage={setPage} />} />
-          <Route path="aboutme" element={<AboutMe setPage={setPage} />} />
-        </Routes> */}
-
         <br></br>
         {/* <div className="copyrightApp" style={{ margin: 'auto' }}>© 2022 Jay.andthesky. Made possible with React.js, ArangoDB, and DJI.</div> */}
         <img src="DronePhoto/Hamburger_icon.svg" className="hamburgerIcon" onClick={(e) => {
