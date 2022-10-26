@@ -60,7 +60,7 @@ export default function Admin() {
                         setMissingField(false);
                         setSuccessfullyPosted(true);
                     }
-                    axios.post('http://67.161.47.190:3000/blog', {
+                    axios.post('http://67.161.47.190:3005/blog', {
                         title: title,
                         shorttitle: shortTitle,
                         author: author,
