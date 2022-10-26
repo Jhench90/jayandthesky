@@ -3,7 +3,7 @@ import { Outlet, Link, useLoaderData } from 'react-router-dom';
 import axios from 'axios';
 
 export function FetchBlog() {
-    return axios.get('http://localhost:3005/blog')
+    return axios.get('http://67.161.47.190:3005/blog')
         .then(function (response) {
             let articles = response.data.sort((a, b) => new Date(b.date) - new Date(a.date))
             return articles;
