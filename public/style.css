@@ -12,15 +12,12 @@ background: linear-gradient(90deg, rgba(157,152,255,1) 0%, rgba(116,232,255,1) 8
   position: fixed;
   height: 100%;
   width: 300px;
-  z-index: 5;
+  z-index: 25;
   background-color: grey;
   opacity: 80%;
   right: 0px;
   top: 0px;
 }
-
-
-
 
 .hamburgerMenuButton {
   font-size: 1.5rem;
@@ -41,10 +38,6 @@ background: linear-gradient(90deg, rgba(157,152,255,1) 0%, rgba(116,232,255,1) 8
   text-align: center;
   line-height: 40px;
 }
-
-
-
-
 
 .x {
   text-align: center;

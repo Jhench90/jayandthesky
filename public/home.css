@@ -26,7 +26,7 @@
 
 .hamburgerIcon {
     position: absolute;
-    z-index: 3;
+    z-index: 25;
     top: 50px;
     right: 50px;
     height: 70px;
