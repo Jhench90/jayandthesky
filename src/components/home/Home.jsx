@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
-import Blogs from '../blogs/Blogs.jsx'
+import Blogs from '../blog/Blogs_old.jsx'
 
 function Home({ setPage, setHamburger }) {
 
@@ -11,11 +11,11 @@ function Home({ setPage, setHamburger }) {
             <div className="logo">
                 <div className="title">Jay and the Sky</div>
                 <div className="homeButton" onClick={(e) => { setHamburger(false) }}>
-                    <Link to="aboutme" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }} onClick={(e) => { setHamburger(false) }}>Software Engineering</Link>
+                    <Link to="about-me" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }} onClick={(e) => { setHamburger(false) }}>Software Engineering</Link>
                 </div>
                 <br/>
                 <div className="homeButton" onClick={(e) => { setHamburger(false) }}>
-                    <Link to="socialmedia"  className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }} onClick={(e) => { setHamburger(false) }}>Social Media</Link>
+                    <Link to="social-media"  className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }} onClick={(e) => { setHamburger(false) }}>Social Media</Link>
                 </div>
                 <br></br>
                 <div className="homeButton" onClick={(e) => {

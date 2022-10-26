@@ -3,9 +3,7 @@ import { Routes, Route, Link, Switch, Outlet } from 'react-router-dom';
 
 
 export default function App() {
-  const [page, setPage] = useState('home')
   const [hamburger, setHamburger] = useState(false)
-
   return (
     <div className="appContainer" id="appContainer">
       <div className="content">
@@ -32,11 +30,11 @@ export default function App() {
               <Link to="productivity" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Productivity</Link>
             </div>
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
-              <Link to="socialmedia" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Social Media</Link>
+              <Link to="social-media" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Social Media</Link>
             </div>
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false)
             }}>
-              <Link to="aboutme" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Software Engineering</Link>
+              <Link to="about-me" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Software Engineering</Link>
             </div>
           </div>
           : null}
