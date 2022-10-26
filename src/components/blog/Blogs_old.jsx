@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-class Blogs extends React.Component {
+class Blogs_old extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -236,4 +236,4 @@ class Blogs extends React.Component {
   }
 }
 
-export default Blogs;
+export default Blogs_old;

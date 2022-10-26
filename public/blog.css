@@ -5,11 +5,22 @@
 .columnLeft {
     float: left;
     width: 20%;
+    min-width: 250px;
+    max-width: 400px;
+    background-color: rgb(225, 225, 225);
+    border-radius: 10px;
 }
 
 .columnRight {
     float: left;
     width: 60%;
+    min-width: 200px;
+    margin-left: 25px;
+}
+
+.blogRow {
+    position: absolute;
+    top: 30px;
 }
 
 /* Clear floats after the columns */
@@ -35,4 +46,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.hoverUnderline {
+    text-decoration: none;
+    color: black;
+}
+
+.hoverUnderline:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
