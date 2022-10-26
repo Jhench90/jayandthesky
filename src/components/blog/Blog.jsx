@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export function FetchBlog(query) {
     // query = query || {params: {postName: 'website-deployment'}}
-    return axios.get(`http://67.161.47.190:3000:3005/blog/post/${query.params.postName}`)
+    return axios.get(`http://67.161.47.190:3005/blog/post/${query.params.postName}`)
         .then(function (article) {
             console.log('The FetchBlog function is working as expected. Database successful', article)
             return article;
