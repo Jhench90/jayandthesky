@@ -2,6 +2,10 @@
     list-style: none;
 }
 
+.blogPostParagraph {
+    font-size: 125%;
+}
+
 .columnLeft {
     float: left;
     width: 20%;

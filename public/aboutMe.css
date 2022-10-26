@@ -10,8 +10,18 @@
     text-indent: 30px;
     
 }
+
+.aboutMeParagraph1 {
+    font-size: 110%;
+}
+.aboutMeParagraph2 {
+    font-size: 110%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 .topMargin {
-    margin-top: 50px;
+    margin-top: 25px;
     /* background: rgb(157,152,255);
 background: linear-gradient(90deg, rgba(157,152,255,1) 0%, rgba(116,232,255,1) 88%); */
 }
@@ -26,5 +36,4 @@ background: linear-gradient(90deg, rgba(157,152,255,1) 0%, rgba(116,232,255,1) 8
     text-align: justify;
     text-indent: 40px;
     width: 600px;
-    margin-top: 50px;
 }

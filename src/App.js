@@ -24,7 +24,7 @@ export default function App() {
               <Link to="aerialdrone" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Aerial Drone</Link>
             </div> */}
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
-              <Link to="blog" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link>
+              <Link to="blog/post/Intro-to-Redux" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link>
             </div>
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
               <Link to="productivity" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Productivity</Link>

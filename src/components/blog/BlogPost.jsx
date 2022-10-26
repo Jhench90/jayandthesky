@@ -37,8 +37,8 @@ export default function BlogPost() {
                 </div>
             </div>
             <div style={{ textAlign: 'center' }}>
-                <div>Author: {articles[activeArticle].author}</div>
-                <div>Date: {articles[activeArticle].date.slice(0, 10)}</div>
+                <div className='blogPostParagraph'>Author: {articles[activeArticle].author}</div>
+                <div className='blogPostParagraph'>Date: {articles[activeArticle].date.slice(0, 10)}</div>
             </div>
             <div>{articles[activeArticle].content.split('\n').map((paragraph) => {
                 if (paragraph.includes('Image:')) {
@@ -47,7 +47,7 @@ export default function BlogPost() {
                         <img src={`/BlogPhoto/${imageURL}`} />
                     </div>
                 } else {
-                    return <p>{paragraph}</p>
+                    return <p className="blogPostParagraph">{paragraph}</p>
                 }
             })}
             </div>
