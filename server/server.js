@@ -2,7 +2,7 @@ const express = require('express');
 const {db} = require('./Arangodb.js');
 const aqlQuery = require('arangojs').aqlQuery
 const app = express();
-const PORT = 3005 || process.env.PORT;
+const PORT = 3000 || process.env.PORT;
 const path = require('path')
 
 var bodyParser = require('body-parser');
