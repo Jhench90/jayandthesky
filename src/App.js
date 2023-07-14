@@ -1,12 +1,11 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, Fragment} from 'react';
 import { Routes, Route, Link, Switch, Outlet } from 'react-router-dom';
 
 
 export default function App() {
   const [hamburger, setHamburger] = useState(false)
   return (
-    <div className="appContainer" id="appContainer">
-      <div className="content">
+    <Fragment>
         <Outlet/>
         <br></br>
         {/* <div className="copyrightApp" style={{ margin: 'auto' }}>© 2022 Jay.andthesky. Made possible with React.js, ArangoDB, and DJI.</div> */}
@@ -38,7 +37,6 @@ export default function App() {
             </div>
           </div>
           : null}
-      </div>
-    </div>
+    </Fragment>
   )
 }

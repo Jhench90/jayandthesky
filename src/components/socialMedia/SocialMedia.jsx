@@ -47,7 +47,7 @@ function SocialMedia({setPage}) {
     let i = 0
 
     return (
-        <>
+        <div className="backgroundWhite">
             <img src="DronePhoto/Jayandtheskybanner.webp" width='100%' />
             <div className="socialMediaTitle" onClick={()=>{
                 setPage('home')
@@ -72,7 +72,7 @@ function SocialMedia({setPage}) {
                     }}>Instagram</span>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

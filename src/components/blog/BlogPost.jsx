@@ -44,7 +44,7 @@ export default function BlogPost() {
                 if (paragraph.includes('Image:')) {
                     let imageURL = paragraph.slice(8);
                     return <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <img src={`/BlogPhoto/${imageURL}`} />
+                        <img src={`/BlogPhoto/${imageURL}`} style={{borderRadius: '10px'}}/>
                     </div>
                 } else {
                     return <p className="blogPostParagraph">{paragraph}</p>

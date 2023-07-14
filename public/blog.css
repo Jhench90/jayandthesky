@@ -4,35 +4,51 @@
 
 .blogPostParagraph {
     font-size: 125%;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .columnLeft {
     float: left;
-    width: 20%;
-    min-width: 250px;
-    max-width: 400px;
-    background-color: rgb(225, 225, 225);
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 300px;
+    background-color: white;
     border-radius: 10px;
 }
 
-.columnRight {
+.columnMiddle {
     float: left;
     width: 60%;
-    min-width: 200px;
+    min-height: inherit;
+    min-width: 600px;
+    max-width: 1000px;
     margin-left: 25px;
+    color: black;
+    background-color: rgb(240, 240, 240);
+}
+.columnRight {
+    float: left;
+    margin-left: 10px;
+    width: 300px;
 }
 
 .blogRow {
-    position: absolute;
-    top: 30px;
+    /* margin: auto; */
+    /* position: absolute; */
+    /* top: 30px; */
+    min-height: 100vh;
+    background-color: rgb(215, 215, 215);
+    color: rgb(235, 235, 235);
 }
 
 /* Clear floats after the columns */
-.blogRow:after {
+/* .blogRow:after {
     content: "";
     display: table;
     clear: both;
-}
+} */
 
 .blogBanner {
     width: 100%;

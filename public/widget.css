@@ -19,12 +19,6 @@
 .pomodoroDisplay {
     font-size: 4.0rem;
 }
-.flexContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
 .pomodoroButtons {
     border: solid black 1.5px;
