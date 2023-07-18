@@ -1,3 +1,8 @@
+.backgroundWhite {
+    background-color: white;
+    min-height: 57vh;
+}
+
 .socialMediaTitle {
     position: absolute;
     top: 50px;
@@ -10,11 +15,14 @@
 }
 
 .socialMediaPostsContainer {
+    background-color: white;
     position: relative;
     top: 30px;
+    min-height: inherit;
 }
 
 .postsContainer {
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

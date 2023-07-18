@@ -48,10 +48,10 @@ export default function Blog() {
 
     return (
         <Fragment>
-            <div class="blogRow">
+            <div class="blogRow flexContainer">
                 <div class="columnLeft">
                     <ul className="list">
-                        <li style={{ textDecoration: 'underline' }}>Articles</li>
+                        <li style={{ textDecoration: 'underline', color: 'black' }}>Articles</li>
                         {articles.map((article) =>
                             <li>
                                 <Link to={`post/${article.shorttitle.split(' ').join('-')}`} id={article._key} className="hoverUnderline" 
@@ -60,8 +60,11 @@ export default function Blog() {
                         )}
                     </ul>
                 </div>
-                <div class="columnRight">
+                <div class="columnMiddle">
                     <Outlet />
+                </div>
+                <div className="columnRight">
+
                 </div>
             </div>
         </Fragment>

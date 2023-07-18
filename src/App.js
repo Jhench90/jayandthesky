@@ -1,12 +1,11 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, Fragment} from 'react';
 import { Routes, Route, Link, Switch, Outlet } from 'react-router-dom';
 
 
 export default function App() {
   const [hamburger, setHamburger] = useState(false)
   return (
-    <div className="appContainer" id="appContainer">
-      <div className="content">
+    <Fragment>
         <Outlet/>
         <br></br>
         {/* <div className="copyrightApp" style={{ margin: 'auto' }}>© 2022 Jay.andthesky. Made possible with React.js, ArangoDB, and DJI.</div> */}
@@ -24,7 +23,7 @@ export default function App() {
               <Link to="aerialdrone" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Aerial Drone</Link>
             </div> */}
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
-              <Link to="blog" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link>
+              <Link to="blog/post/Intro-to-Redux" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link>
             </div>
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
               <Link to="productivity" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Productivity</Link>
@@ -38,7 +37,6 @@ export default function App() {
             </div>
           </div>
           : null}
-      </div>
-    </div>
+    </Fragment>
   )
 }
