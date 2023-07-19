@@ -16,6 +16,7 @@ app.use(cors());
 
 //blog
 app.get('/blog', (req, res)=>{
+  console.log('serving request for all blog posts...')
     let collection = db.collection('blog');  
     // retrieve entire collection
     collection.all().then(

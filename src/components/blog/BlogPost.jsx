@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Outlet, Link, useLoaderData } from 'react-router-dom';
 import axios from 'axios';
-import { IP_ADDRESS_ROUTES_SERVER } from '../../constants/ip';
+import { IPServerRoutes } from '../../const/IPServerRoutes';
 
 export function FetchBlog() {
-    return axios.get(`${IP_ADDRESS_ROUTES_SERVER}/blog`)
+    return axios.get(`http://${IPServerRoutes}:3005/blog`)
         .then(function (response) {
             let articles = response.data.sort((a, b) => new Date(b.date) - new Date(a.date))
             return articles;
@@ -38,17 +38,17 @@ export default function BlogPost() {
                 </div>
             </div>
             <div style={{ textAlign: 'center' }}>
-                <div className='blogPostParagraph'>Author: {articles[activeArticle].author}</div>
-                <div className='blogPostParagraph'>Date: {articles[activeArticle].date.slice(0, 10)}</div>
+                <div>Author: {articles[activeArticle].author}</div>
+                <div>Date: {articles[activeArticle].date.slice(0, 10)}</div>
             </div>
             <div>{articles[activeArticle].content.split('\n').map((paragraph) => {
                 if (paragraph.includes('Image:')) {
                     let imageURL = paragraph.slice(8);
                     return <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <img src={`/BlogPhoto/${imageURL}`} style={{borderRadius: '10px'}}/>
+                        <img src={`/BlogPhoto/${imageURL}`} />
                     </div>
                 } else {
-                    return <p className="blogPostParagraph">{paragraph}</p>
+                    return <p>{paragraph}</p>
                 }
             })}
             </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { IP_ADDRESS_ROUTES_SERVER } from '../../constants/ip';
+import { IPServerRoutes } from '../../const/IPServerRoutes';
 
 export default function Admin() {
     const [title, setTitle] = useState('');
@@ -61,7 +61,7 @@ export default function Admin() {
                         setMissingField(false);
                         setSuccessfullyPosted(true);
                     }
-                    axios.post(`${IP_ADDRESS_ROUTES_SERVER}/blog`, {
+                    axios.post(`http://${IPServerRoutes}:3005/blog`, {
                         title: title,
                         shorttitle: shortTitle,
                         author: author,
