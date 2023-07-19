@@ -1,0 +1,2 @@
+export const IP_ADDRESS_ROUTES_SERVER = "http://67.161.47.190:3005/"
+export const IP_ADDRESS_HTML_SERVER = "http://67.161.47.190:3000";

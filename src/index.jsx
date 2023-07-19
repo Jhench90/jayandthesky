@@ -26,10 +26,10 @@ const router = createBrowserRouter([
     element: <App/>,
     errorElement: <ErrorPage/>,
     children: [
-      // {
-      //   path: 'aerialdrone',
-      //   element: <Drone/>
-      // },
+      {
+        path: 'aerialdrone',
+        element: <Drone/>
+      },
       {
         path: 'admin',
         element: <Admin />

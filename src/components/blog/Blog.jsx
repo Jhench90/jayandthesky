@@ -1,10 +1,11 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import axios from 'axios';
+import { IP_ADDRESS_ROUTES_SERVER } from '../../constants/ip';
 
 export function FetchBlog(query) {
     // query = query || {params: {postName: 'website-deployment'}}
-    return axios.get(`http://67.161.47.190:3005/blog/post/${query.params.postName}`)
+    return axios.get(`${IP_ADDRESS_ROUTES_SERVER}/blog/post/${query.params.postName}`)
         .then(function (article) {
             console.log('The FetchBlog function is working as expected. Database successful', article)
             return article;
@@ -12,7 +13,7 @@ export function FetchBlog(query) {
 }
 
 function FetchAllBlogs() {
-    return axios.get(`http://67.161.47.190:3005/blog`)
+    return axios.get(`${IP_ADDRESS_ROUTES_SERVER}/blog`)
         .then(function (response) {
             let articles = response.data.sort((a, b) => new Date(b.date) - new Date(a.date))
             return articles;

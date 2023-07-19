@@ -1,9 +1,10 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Outlet, Link, useLoaderData } from 'react-router-dom';
 import axios from 'axios';
+import { IP_ADDRESS_ROUTES_SERVER } from '../../constants/ip';
 
 export function FetchBlog() {
-    return axios.get('http://67.161.47.190:3005/blog')
+    return axios.get(`${IP_ADDRESS_ROUTES_SERVER}/blog`)
         .then(function (response) {
             let articles = response.data.sort((a, b) => new Date(b.date) - new Date(a.date))
             return articles;
