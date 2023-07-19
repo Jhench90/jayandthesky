@@ -1,0 +1,1 @@
+export const IPServerRoutes = "24.17.138.144";
