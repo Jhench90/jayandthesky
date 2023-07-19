@@ -16,9 +16,10 @@ import BlogPost from './components/blog/BlogPost.jsx';
 import Drone from './components/Drone.jsx';
 import Home from './components/home/Home.jsx';
 import Productivity from './components/productivity/Productivity.jsx';
-import SocialMedia from './components/socialMedia/SocialMedia.jsx';
+import SocialMedia from './components/photos/SocialMedia.jsx';
 import App from './App';
 import ErrorPage from './error-page';
+import DogApi from './components/photos/dogApi';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     element: <App/>,
     errorElement: <ErrorPage/>,
     children: [
+      {
+        path: 'dog-api',
+        element: <DogApi/>
+      },
       {
         path: 'aerialdrone',
         element: <Drone/>

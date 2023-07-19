@@ -19,12 +19,15 @@ export default function App() {
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
               <Link to="/" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link>
             </div>
-            {/* <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
+            <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
               <Link to="aerialdrone" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Aerial Drone</Link>
-            </div> */}
+            </div>
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false)
             console.log('Opening blog post Intro to redux...') }}>
               <Link to="blog/post/Intro-to-Redux" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link>
+            </div>
+            <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
+              <Link to="dog-api" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Dog Api</Link>
             </div>
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
               <Link to="productivity" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Productivity</Link>
