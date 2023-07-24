@@ -25,13 +25,13 @@
     min-width: 600px;
     max-width: 1000px;
     margin-left: 25px;
-    color: black;
+    color: white;
     background-color: rgb(240, 240, 240);
 }
 .columnRight {
     float: left;
     margin-left: 10px;
-    width: 300px;
+    width: 600px;
 }
 
 .blogRow {
@@ -39,7 +39,7 @@
     /* position: absolute; */
     /* top: 30px; */
     min-height: 100vh;
-    background-color: rgb(215, 215, 215);
+    background-color: rgb(145, 145, 145);
     color: rgb(235, 235, 235);
 }
 

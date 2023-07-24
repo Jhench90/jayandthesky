@@ -64,24 +64,33 @@ function PhotoPage({ setPage, posts, banner, title, socialMediaLink }) {
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 contentLabel="Dog Photo Modal"
-                // overlay={{
-                //     marginLeft: "50%",
-                //     marginRight: "50%"
-                // }}
-                style={{content: {
-                   
-                }}}
             >
-                <img
-                    src={selectedPhoto}
-                    alt="Dog Photo"
-                    style={{
-                        maxHeight: "800px",
-                        maxWidth: "800px",
-                        margin: "auto"
-                    }}
-                />
-                <button onClick={closeModal}>Close</button>
+                <div className="flexContainer" style={{ position: 'relative', }}>
+                    <div style={{position: 'relative'}}>
+                        <img
+                            src={selectedPhoto}
+                            alt="Dog Photo"
+                            style={{
+                                position: 'relative',
+                                maxHeight: "800px",
+                                maxWidth: "800px",
+                                margin: "auto"
+                                // position: 'fixed',
+                                // top: '50%',
+                                // left: '50%',
+                                // transform: 'translate(-50%, -50%)'
+                            }}
+                        />
+                         <div className="socialXButton"
+                        style={{
+                            position: 'absolute',
+                            left: '-50px',
+                            top: '0px',
+                            margin: 'auto'
+                        }}
+                        onClick={closeModal}>X</div>
+                    </div>   
+                </div>
             </Modal>
 
         </div>

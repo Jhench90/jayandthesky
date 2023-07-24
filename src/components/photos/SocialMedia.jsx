@@ -38,7 +38,7 @@ function SocialMedia({setPage}) {
             photo: 'IGphoto/9.png',
             url: 'https://www.instagram.com/p/CWAkW9SlASU/'
         }])
-    const [display, setDisplay] = useState(4)
+    const [display, setDisplay] = useState(8)
 
     function incrementDisplay() {
         let count = display + 4

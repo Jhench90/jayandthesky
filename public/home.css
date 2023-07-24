@@ -16,6 +16,11 @@ body {
     height: 100%;
 }
 
+.droneBackground {
+     background: url(DronePhoto/DJI_0224.jpg) no-repeat center center fixed; 
+     height: 100vh;
+}
+
 .homeContainer {
     overflow: hidden;
 }

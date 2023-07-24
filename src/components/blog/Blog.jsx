@@ -51,7 +51,7 @@ export default function Blog() {
         <Fragment>
             <div class="blogRow">
                 <div class="columnLeft">
-                    <ul className="list">
+                    <ul className="list" style={{color: 'black'}}>
                         <li style={{ textDecoration: 'underline' }}>Articles</li>
                         {articles.map((article) =>
                             <li>
@@ -61,8 +61,11 @@ export default function Blog() {
                         )}
                     </ul>
                 </div>
-                <div class="columnRight">
+                <div class="columnMiddle" style={{backgroundColor: "rgb(145, 145, 145)"}}>
                     <Outlet />
+                </div>
+                <div class="columnRight">
+                    Empty
                 </div>
             </div>
         </Fragment>

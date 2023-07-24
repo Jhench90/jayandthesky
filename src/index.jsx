@@ -20,6 +20,7 @@ import SocialMedia from './components/photos/SocialMedia.jsx';
 import App from './App';
 import ErrorPage from './error-page';
 import DogApi from './components/photos/dogApi';
+import Home2 from './components/Home2';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     element: <App/>,
     errorElement: <ErrorPage/>,
     children: [
+      {
+        path: 'home2',
+        element: <Home2/>
+      },
       {
         path: 'dog-api',
         element: <DogApi/>

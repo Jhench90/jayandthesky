@@ -1,3 +1,5 @@
+
+
 body {
   font-family: sans-serif, arial;
 }
@@ -13,7 +15,9 @@ background: linear-gradient(90deg, rgba(157,152,255,1) 0%, rgba(116,232,255,1) 8
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start;
+  /* align-items: flex-start; */
+  
+  align-items: center;
   /* align-items: stretch; */
 }
 
