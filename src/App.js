@@ -9,7 +9,7 @@ export default function App() {
         <Outlet/>
         <br></br>
         {/* <div className="copyrightApp" style={{ margin: 'auto' }}>© 2022 Jay.andthesky. Made possible with React.js, ArangoDB, and DJI.</div> */}
-        <img src="DronePhoto/Hamburger_icon.svg" className="hamburgerIcon" onClick={(e) => {
+        <img src="DronePhoto/Hamburger_icon.png" className="hamburgerIcon" onClick={(e) => {
           if (hamburger) { setHamburger(false); } 
           else { setHamburger(true); }
         }} />
