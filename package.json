@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "jest",
     "test-react": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "wdio": "wdio run ./wdio.conf.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +44,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@wdio/cli": "^8.24.16",
+    "@wdio/local-runner": "^8.24.12",
+    "@wdio/mocha-framework": "^8.24.12",
+    "@wdio/spec-reporter": "^8.24.12",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3"
   }
 }

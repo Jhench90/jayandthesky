@@ -15,7 +15,7 @@ export default function App() {
         }} />
         {hamburger ?
           <div className="hamburgerMenu">
-            <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>X</div>
+            <div id="hamburgerButton" className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>X</div>
             <div className="hamburgerMenuButton" onClick={(e) => { setHamburger(false) }}>
               <Link to="/" className="hamburgerAnchor" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link>
             </div>
