@@ -13,7 +13,7 @@ class JayHomePage extends JayPageBase {
         return $(`img.hamburgerIcon`);
     }
     public get XButton() {
-        return $(`#hamburgerButton`)
+        return $(`#XButton`)
     }
 
     /**
